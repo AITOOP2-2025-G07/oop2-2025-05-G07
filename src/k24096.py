@@ -4,7 +4,7 @@ from my_module.K21999.lecture05_camera_image_capture import MyVideoCapture
 
 def k24096():
 
-    # カメラキャプチャ実行
+    # カメラキャプチャ実行a
     app = MyVideoCapture()
     app.run()
 
