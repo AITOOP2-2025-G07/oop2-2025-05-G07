@@ -25,7 +25,9 @@ def lecture05_01():
             if (b, g, r) == (255, 255, 255):
                 pass
                 #implement me
+                google_img[y, x] = capture_img[y, x]
 
     # 書き込み処理
     # implement me
+    cv2.imwrite('output_images/merged_output.png', google_img)
 
