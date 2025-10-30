@@ -10,7 +10,7 @@ def lecture05_01():
 
     # 画像をローカル変数に保存
     google_img: cv2.Mat = cv2.imread('images/google.png')
-    capture_img: cv2.Mat = cv2.imread('images/camera_capture.png')  # 動作テスト用（提出時に削除）
+    capture_img: cv2.Mat = cv2.imread('images/camera_capture.png')
 
     if google_img is None or capture_img is None:
         print("画像の読み込みに失敗しました。")
@@ -34,8 +34,8 @@ def lecture05_01():
             b, g, r = google_img[y, x]
             # もし白(255,255,255)ならカメラ画像の画素で置換
             if (b, g, r) == (255, 255, 255):
-                output_img[y, x] = resized_capture[y, x]
+                output_img[y, x] = capture_img[y, x]
 
-    # 書き込み処理
+    # ##書き込み処理
     cv2.imwrite('output_images/merged_output.png', output_img)
     print("合成画像を保存しました → output_images/merged_output.png")
