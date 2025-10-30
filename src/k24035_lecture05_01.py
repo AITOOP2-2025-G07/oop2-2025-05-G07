@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from my_module.K21999.lecture05_camera_image_capture import MyVideoCapture
+from my_module.K24035.lecture05_camera_image_capture import MyVideoCapture
 
 def lecture05_01():
 
@@ -28,4 +28,18 @@ def lecture05_01():
 
     # 書き込み処理
     # implement me
+    output_dir = 'output_images'
+    output_filepath = os.path.join(output_dir, 'lecture05_01_k24035.png')
 
+    # 出力ディレクトリが存在しない場合は作成
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    # 新たな画像として保存
+    cv2.imwrite(output_filepath, result_img)
+    print(f"処理完了: 新しい画像は '{output_filepath}' に保存されました。")
+
+    # 処理後の画像を表示（確認用、オプション）
+    cv2.imshow('Result Image', result_img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
