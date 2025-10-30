@@ -36,6 +36,6 @@ def lecture05_01():
             if (b, g, r) == (255, 255, 255):
                 output_img[y, x] = capture_img[y, x]
 
-    #書き込み処理
+    #書き込み処
     cv2.imwrite('output_images/merged_output.png', output_img)
     print("合成画像を保存しました → output_images/merged_output.png")
