@@ -28,6 +28,7 @@ def lecture05_01():
 
     # 書き込み処理
     # implement me
+    app.write_img()
     output_dir = 'output_images'
     output_filepath = os.path.join(output_dir, 'lecture05_01_k24035.png')
 
